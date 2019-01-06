@@ -14,7 +14,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 // if you don ' t have drand48 uncomment the following two lines 10
 // #define drand48 1.0/RANDMAXrand
 // #define srand48 srand
@@ -30,14 +29,12 @@ int main (int argc, char ** argv) {
   int N = atoi(argv[1]);
   int M = 0 ;
   double pi = 0;
- 
- // point coordinates
+  // point coordinates
   double x , y;
   FILE  *output ; // save data in pi.dat
   output = fopen ("pi.dat" , "w") ;
   srand48 ( seed ) ; // seed the number generator
 
-  
   unsigned int i;
   for (i = 0 ; i < N ; i++)
     {
@@ -50,8 +47,8 @@ int main (int argc, char ** argv) {
 	M++; 
     }
   pi = 4.0*M/N ; // calculate area
-  
   fprintf ( output, "%i\t%f\n", N, pi ) ;
+  printf ( "estimated pi stored in pi.dat \n" ) ;
   fclose (output) ;
   return 0;
 }
