@@ -7,7 +7,10 @@ echo
 echo "STRONG SCALABILITY SCRIPT"
 echo
 
-N=10000000000
+FOLDER="/home/fcicala/high-performance-computing/01_Scalability/parallel/strong_scalability/"
+cd "$FOLDER"
+
+N=100000
 
 for procs in {1..20}
 do
@@ -20,7 +23,6 @@ do
   echo "Iterations per processor: $iter_per_proc"
   echo "/////////////////////////////////////////"
   echo
-  mpirun -np $procs /home/fcicala/ex1_scalability/strong_exec/mpi_strong.x $iter_per_proc
+  mpirun -np $procs mpi_strong.x $iter_per_proc
 done 
 
-mv /home/fcicala/strong_scal.dat /home/fcicala/ex1_scalability/strong_exec/strong_scal.dat
