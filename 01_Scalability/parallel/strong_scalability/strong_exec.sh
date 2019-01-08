@@ -3,7 +3,6 @@
 module load openmpi
 find . -type f -name strong_exec.sh.\* -exec rm {} \;
 
-
 echo
 echo "STRONG SCALABILITY SCRIPT"
 echo
@@ -41,7 +40,7 @@ do
   echo "/////////////////////////////////////////"
   echo
   mpirun -np $procs mpi_strong.x $iter_per_proc
-done 
+done
 mv strong_scal.dat strong_scal6.dat
 
 
