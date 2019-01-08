@@ -9,8 +9,6 @@ echo
 
 FOLDER="/home/fcicala/high-performance-computing/01_Scalability/parallel/strong_scalability/"
 cd "$FOLDER"
-M = 3 # number of runs for each N and procs fixed, for a better statistics
-
 
 N=100000
 for procs in {1..20}
