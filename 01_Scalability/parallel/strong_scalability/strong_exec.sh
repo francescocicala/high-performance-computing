@@ -10,7 +10,7 @@ echo
 FOLDER="/home/fcicala/high-performance-computing/01_Scalability/parallel/strong_scalability/"
 cd "$FOLDER"
 
-N=100000
+N=1000000
 for procs in {1..20}
 do
   iter_per_proc=$(bc <<< "scale = 4; $N/$procs")
@@ -27,7 +27,7 @@ done
 mv strong_scal.dat strong_scal5.dat
 
 
-N=1000000
+N=10000000
 for procs in {1..20}
 do
   iter_per_proc=$(bc <<< "scale = 4; $N/$procs")
@@ -44,7 +44,7 @@ done
 mv strong_scal.dat strong_scal6.dat
 
 
-N=10000000
+N=100000000
 for procs in {1..20}
 do
   iter_per_proc=$(bc <<< "scale = 4; $N/$procs")
