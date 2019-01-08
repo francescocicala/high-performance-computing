@@ -1,7 +1,7 @@
 #! /bin/bash
 
 module load openmpi
-find . -type f -name strong_run.sh.\* -exec rm {} \;
+find . -type f -name strong_exec.sh.\* -exec rm {} \;
 
 echo
 echo "STRONG SCALABILITY SCRIPT"
