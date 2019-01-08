@@ -24,6 +24,7 @@ do
   echo
   mpirun -np $procs mpi_strong.x $iter_per_proc
 done 
+mv strong_scal.dat strong_scal5.dat
 
 
 N=1000000
@@ -40,6 +41,7 @@ do
   echo
   mpirun -np $procs mpi_strong.x $iter_per_proc
 done 
+mv strong_scal.dat strong_scal6.dat
 
 
 N=10000000
@@ -56,6 +58,8 @@ do
   echo
   mpirun -np $procs mpi_strong.x $iter_per_proc
 done 
+mv strong_scal.dat strong_scal7.dat
+
 
 echo "COMPLETED"
 
